@@ -12,6 +12,7 @@
 
 # production
 /src/components/.env
+/build
 
 # misc
 .DS_Store
