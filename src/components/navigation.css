@@ -1,0 +1,290 @@
+.grow {
+    color: #ffffff;
+    transition-duration: 0.5s;
+    position:relative;
+    display: inline;
+}
+.grow:hover {
+    color: #000000;
+    padding: 4px 6px;
+    position:relative;
+    display: inline;
+}
+
+.grows {
+    color: #ffffff;
+    transition-duration: 0.4s;
+}
+.grows:hover {
+    color: #000000;
+    padding: 1px 3px;
+}
+.purple {
+    color: #9b4cc9;
+}
+.color-purple {
+    color: #9b4cc9;
+}
+.footerg {
+    color: #ffffff;
+    transition-duration: 0.4s;
+}
+.footerg:hover {
+    color: #000000;
+    padding: 1px 3px;
+}
+.dont_click {
+    color: #ffd000;
+    transition-duration: 0.4s;
+}
+.dont_click:hover {
+    color: #ff0000;
+    padding: 1px 3px;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.slice {
+    border-radius: 11px;
+    background-color: #5bc0de;
+    position:relative;
+    display: inline;
+}
+.padd{
+    padding: 1px 20px;
+}
+.icon-round {
+    width: 23px; /* update this to control the size */
+    aspect-ratio: 1;
+    transition-duration: 0.5s;
+    background-color: #5bc0de;
+    background:
+      radial-gradient(closest-side at 12.5% 25%,rgb(255, 255, 255) 96%,rgba(255, 255, 255, 0)) 0 0/80% 40%,
+      linear-gradient(rgb(255, 255, 255) 50%,rgba(255, 255, 255, 0) 0) top/80% 40% repeat-y;
+
+
+  }
+.icon-round:hover {
+    width: 22px;
+    background-color: #5bc0de;
+    background:
+      radial-gradient(closest-side at 12.5% 25%,rgb(0, 0, 0) 96%,rgba(0, 0, 0, 0)) 0 0/80% 40%,
+      linear-gradient(rgb(0, 0, 0) 50%,rgba(0, 0, 0, 0) 0) top/80% 40% repeat-y;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #5bc0de;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar.a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #5f5f5f;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar.a:hover {
+    color: #5bc0de;
+  }
+  .row-full{
+    width: 90vw;
+    display: inline-block;
+    outline: none;
+}
+  .sidebar .closebtn {
+    padding-top: 24px;
+    position: absolute;
+    top: 0;
+    color: #ffffff;
+    right: 25px;
+    transition: 0.5s;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .sidebar .closebtn:hover{
+    padding-top: 25px;
+    color: #5bc0de;
+  }
+  .sidebar.a{
+    padding-top: 0px;
+  }
+  .sidebar.a:hover {
+    padding-top: 2px;
+  }
+  .openbtn:focus {outline:0;}
+  .openbtn {
+
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 17px;
+    background-color: #5bc0de;
+    position:relative;
+    display: inline-block;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+  }
+  
+  .openbtn:hover {
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #5bc0de;
+    position:relative;
+    display: inline;
+    border: none;
+    outline: none;
+  }
+  
+  #main {
+    transition:5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+.nav-blue {
+    border-radius: 11px;
+    background-color: #5bc0de;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Testing(unsafe)*/
+
+.inpu {
+  --s: 10px;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: calc(2 * var(--s)) 0;
+  cursor: pointer;
+  height: var(--s);
+  aspect-ratio: 5/1;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  box-shadow: 
+    0 calc(2 * var(--s)) 0 #000, 
+    0 calc(-2 * var(--s)) 0 #000;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+.inpu:before,
+.inpu:after {
+  content: "";
+  position: absolute;
+  inset: calc(-2 * var(--s)) 0;
+  transition: 0.4s;
+  background: 
+    radial-gradient(farthest-side, #000 98%, #0000) 0 / var(--s) var(--s) repeat-x,
+    linear-gradient(#000 0 0) 50% / calc(100% - var(--s)) var(--s) no-repeat;
+}
+.inpu:focus-visible {
+  outline: none;
+}
+.inpu:focus-visible::before {
+  outline: 1px solid;
+  outline-offset: 5px;
+}
+.inpu:hover {
+  box-shadow: 
+    0 calc(1.6 * var(--s)) 0 #000, 
+    0 calc(-1.6 * var(--s)) 0 #000;
+}
+.inpu:checked {
+  box-shadow: 
+    0 calc(6 * var(--s)) 0 #0000, 
+    0 calc(-6 * var(--s)) 0 #0000;
+}
+.inpu:checked::before,
+.inpu:checked::after {
+  transform: rotate(45deg);
+  transition: 0.6s 0.1s;
+}
+.inpu:checked::after {
+  transform: rotate(-45deg);
+}

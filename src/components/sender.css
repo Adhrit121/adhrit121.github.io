@@ -1,0 +1,115 @@
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #5bc0de; /* Green */
+    
+    padding: 5px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #5bc0de;
+    border-radius: 15px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+  
+.button3:hover {
+    background-color: #5bc0de;
+    color: white;
+    border-radius: 11px;
+    padding: 6px 10px;
+}
+.input {
+    background-color: white;
+    color: black;
+    border: 2px solid #5bc0de; /* Green */
+    
+    padding: 5px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    
+    border-radius: 11px;
+}
+.boxloader{
+
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+  
+}
+
+.fill-window {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  overflow: hidden;
+}
+.input:hover {
+    background-color: #5bc0de;
+    padding: 6px 10px;
+    border: 2px solid #5bc0de;
+    color: white;
+    border-radius: 15px;
+}
+.heading {
+    padding: 5px 9px;
+    transition-duration: 0.4s;
+}
+.heading:hover {
+    padding: 9px 12px;
+    
+}
+.blue {
+    color: #5bc0de;
+}
+.text{
+    transition-duration: 0.4s;
+}
+.text:hover {
+    padding: 1px 2.5px;
+}
+.messa {
+    color: #5bc0de;
+    transition-duration: 0.4s;
+    
+}
+.messa:hover {
+    padding: 2.5px 4px;
+    color: #ff0000;
+}
+.black {
+    color: #000000;
+}

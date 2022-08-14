@@ -1,0 +1,11 @@
+.red {
+    color: rgb(255, 0, 0);
+}
+.yellowtored {
+    color: #ffd000;
+    transition-duration: 0.4s;
+}
+.yellowtored:hover {
+    color: #ff0000;
+    transition-duration: 0.4s;
+}
