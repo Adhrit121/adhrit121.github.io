@@ -11,7 +11,6 @@
 /src/components/.env
 
 # production
-/build
 /src/components/.env
 
 # misc
