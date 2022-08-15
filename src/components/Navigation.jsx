@@ -41,7 +41,7 @@ function NavigationSimple() {
       
       <nav className={classNam} >
         <div id="mySidebar" class="sidebar green">
-          <a href="?" class="closebtn" onClick={closeNav}><h3>✖</h3></a>
+          <a href="#" class="closebtn" onClick={closeNav}><h3>✖</h3></a>
           <a href="/">Home</a>
           <a href="/#/about/">About</a>
           <a href="/#/contact/">Contact Me</a>
