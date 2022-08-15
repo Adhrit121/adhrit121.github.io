@@ -42,7 +42,7 @@ function NavigationSimple() {
           <a href="/">Home</a>
           <a href="/#/about/">About</a>
           <a href="/#/contact/">Contact Me</a>
-          <a href="/#/projects/?color=green">My Projects</a>
+          <a href="/#/projects">My Projects</a>
         </div>
         <div id="main">
           <container class="row row-full">
