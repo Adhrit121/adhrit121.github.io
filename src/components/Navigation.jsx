@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom/client';
 // eslint-disable-next-line
 import { NavLink } from "react-router-dom";
 import './navigation.css';
-import Terminal from 'terminal-in-react';
-// eslint-disable-next-line
-import CircleLoader from "react-spinners/CircleLoader";
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
@@ -41,7 +38,7 @@ function NavigationSimple() {
       
       <nav className={classNam} >
         <div id="mySidebar" class="sidebar green">
-          <a href="#" class="closebtn" onClick={closeNav}><h3>✖</h3></a>
+          <a href="JavaScript:void(0);" class="closebtn" onClick={closeNav}><h3>✖</h3></a>
           <a href="/">Home</a>
           <a href="/#/about/">About</a>
           <a href="/#/contact/">Contact Me</a>

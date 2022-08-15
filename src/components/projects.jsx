@@ -4,6 +4,9 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Terminal from 'terminal-in-react';
 import {render} from '@testing-library/react';
 
+function isEmpty(value){
+  return (value == null || value.length === 0);
+}
 function ProjectsSimple() {
 
 
@@ -44,7 +47,10 @@ function ProjectsSimple() {
 
   const queryParams = new URLSearchParams(window.location.search);
   const color = queryParams.get('color');
-
+  const x=isEmpty(color)
+  if (x==true){
+    color='green'
+  }
   return (
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
@@ -77,7 +83,7 @@ function ProjectsSimple() {
                 color: {
                   method: (args, print, runCommand) => {
                     print(`The color is ${args._[0] || args.color}`);
-                    window.open("/projects/?color="+`${args._[0] || args.color}`, "_self");
+                    window.open("/#/projects/?color="+`${args._[0] || args.color}`, "_self");
                     
                   },
                   
@@ -99,8 +105,8 @@ function ProjectsSimple() {
                   }
                   
                 },
-                'about': () => window.open('/about', "_self"),
-                'contact': () => window.open('/contact', "_self"),
+                'about': () => window.open('/#/about', "_self"),
+                'contact': () => window.open('/#/contact', "_self"),
                 'this.code': () => window.open('https://github.com/Adhrit121/adhrit.vip', "_self"),
                 
                 
