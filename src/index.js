@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceworker";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import {
   NavigationSimple,
   FooterSimple,
@@ -19,8 +20,9 @@ import {
 } from "./components";
 
 
+
 ReactDOM.render(
-  <Router>
+  <HashRouter>
     <NavigationSimple options={{
           headerStyle: {backgroundColor: "#fff", borderBottomWidth: 0 ,
           headerTitleStyle: { color: "#000" },
@@ -38,9 +40,10 @@ ReactDOM.render(
       <Route path="/projects" element={<ProjectsSimple />} />
     </Routes>
     <FooterSimple />
-  </Router>,
+  </HashRouter>,
 
   document.getElementById("root")
+
 );
 
-serviceWorker.unregister();
+

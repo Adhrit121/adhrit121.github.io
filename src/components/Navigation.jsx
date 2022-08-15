@@ -42,10 +42,10 @@ function NavigationSimple() {
       <nav className={classNam} >
         <div id="mySidebar" class="sidebar green">
           <a href="#!" class="closebtn" onClick={closeNav}><h3>✖</h3></a>
-          <a href="/?color=green">Home</a>
-          <a href="/about/?color=green">About</a>
-          <a href="/contact/?color=green">Contact Me</a>
-          <a href="/projects/?color=green">My Projects</a>
+          <a href="/">Home</a>
+          <a href="/#/about/">About</a>
+          <a href="/#/contact/">Contact Me</a>
+          <a href="/#/projects/?color=green">My Projects</a>
         </div>
         <div id="main">
           <container class="row row-full">
