@@ -47,10 +47,10 @@ function ProjectsSimple() {
 
   const queryParams = new URLSearchParams(window.location.search);
   const color = queryParams.get('color');
-  if ((isEmpty(color))==true){
-    var colr='green'
-  }else{
+  if ( color ){
     var colr=color
+  }else{
+    var colr='green'
   }
   return (
     //Add this to get background with autochange:↓(still under development)
@@ -85,6 +85,7 @@ function ProjectsSimple() {
                   method: (args, print, runCommand) => {
                     print(`The color is ${args._[0] || args.color}`);
                     window.open("/#/projects?color="+`${args._[0] || args.color}`, "_self");
+                    render(window.location.reload());
                     
                   },
                   

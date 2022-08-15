@@ -7,14 +7,14 @@ import './navigation.css';
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
-  console.log("Side Navbar opened")
+  console.log("Navbar opened")
   
 }
 
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
-  console.log("Side Navbar closed")
+  console.log("Navbar closed")
 }
 function NavigationSimple() {
   const queryParams = new URLSearchParams(window.location.search);
