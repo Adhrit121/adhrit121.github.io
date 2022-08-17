@@ -3,9 +3,13 @@ import './Home.css';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Terminal from 'terminal-in-react';
 import {render} from '@testing-library/react';
+import { useSearchParams } from "react-router-dom"
+const Results = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
 
-function isEmpty(value){
-  return (value == null || value.length === 0);
+  const color = searchParams.get('color')
+  console.log(color)
+
 }
 function ProjectsSimple() {
 
@@ -45,13 +49,13 @@ function ProjectsSimple() {
     }
   }, [home]);
 
-  const queryParams = new URLSearchParams(window.location.search);
-  const color = queryParams.get('color');
-  if ( color ){
-    var colr=color
-  }else{
-    var colr='green'
-  }
+
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const color = searchParams.get('color')
+
+
+
   return (
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
@@ -76,7 +80,7 @@ function ProjectsSimple() {
           <Terminal
             watchConsoleLogging
             class='bash'
-            color={colr}
+            color={color}
             backgroundColor='black'
             barColor='black'
             style={{ fontWeight: "bold", fontSize: "1em" }}
