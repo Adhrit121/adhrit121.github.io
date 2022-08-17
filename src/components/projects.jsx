@@ -11,6 +11,29 @@ const Results = () => {
   console.log(color)
 
 }
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 function ProjectsSimple() {
 
 
@@ -56,11 +79,28 @@ function ProjectsSimple() {
 
 
 
+
+
+
+
+
+
+
+  const { height, width } = useWindowDimensions();
+  if (height > 767 || width > 1024){
+
+  }else{
+    alert("This website works best on large screens and you may face some issues")
+  }
+
+
+
   return (
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
     <div className="home" >
       {show && <div className="loader-container fill-window">
+
         <ClimbingBoxLoader class="boxloader" color="#5bc0de" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
       {home && <header className='  '>
@@ -112,7 +152,6 @@ function ProjectsSimple() {
                 },
                 'about': () => window.open('/#/about', "_self"),
                 'contact': () => window.open('/#/contact', "_self"),
-                'this.code': () => window.open('https://github.com/Adhrit121/adhrit.vip', "_self"),
                 
                 
             }}

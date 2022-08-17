@@ -97,11 +97,10 @@ function ContactSimple() {
               <h2 class="heading blue">Contact Me ↓</h2>
               
               <h6 class="text">.</h6>
-              <h6 class="text">Under construction</h6>
+              <h6 class="text">Still under construction</h6>
 
               
 
-            
                     </div>
             
           </div>
