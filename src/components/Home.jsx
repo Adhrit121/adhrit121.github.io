@@ -4,7 +4,29 @@ import desktopImage from './desktop.jpg';
 import mobileImage from './mobile.jpg';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 function HomeSimple() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -56,6 +78,12 @@ function HomeSimple() {
     }, 2005);
     }
   }, [home]);
+  const { height, width } = useWindowDimensions();
+  if (height > 767 || width > 1024){
+
+  }else{
+    alert("This website works best on large screens and you may face some issues on this device")
+  }
   return (
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}

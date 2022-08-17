@@ -1,6 +1,29 @@
 import React,{ useState, useEffect, CSSProperties } from "react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import "./about.css"
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 function AboutSimple() {
   const openInNewTab = url => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -36,6 +59,12 @@ function AboutSimple() {
     }, 2005);
     }
   }, [home]);
+  const { height, width } = useWindowDimensions();
+  if (height > 767 || width > 1024){
+
+  }else{
+    alert("This website works best on large screens and you may face some issues on this device")
+  }
   return (
     <div className="about">
       {show && <div className="loader-container fill-window">

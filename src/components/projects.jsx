@@ -90,7 +90,7 @@ function ProjectsSimple() {
   if (height > 767 || width > 1024){
 
   }else{
-    alert("This website works best on large screens and you may face some issues")
+    alert("This website works best on large screens and you may face some issues on this device")
   }
 
 
