@@ -89,7 +89,6 @@ function ProjectsSimple() {
                   method: (args, print, runCommand) => {
                     print(`The color is ${args._[0] || args.color}`);
                     window.open("/#/projects?color="+`${args._[0] || args.color}`, "_self");
-                    render(window.location.reload());
                     
                   },
                   

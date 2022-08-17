@@ -94,7 +94,7 @@ function ContactSimple() {
         <div class="container">
           <div class="row align-items-center my-5">
             <div class="col-lg-5">
-              <h2 class="heading blue">Contact Me ↓</h2>
+              <h2 class="heading blue">Contact Me ↓(Not working)</h2>
               
               <h6 class="text">.</h6>
               <h6 class="text">.</h6>
