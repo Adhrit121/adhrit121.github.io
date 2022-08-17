@@ -94,42 +94,13 @@ function ContactSimple() {
         <div class="container">
           <div class="row align-items-center my-5">
             <div class="col-lg-5">
-              <h2 class="heading blue">Contact Me ↓(Not working)</h2>
+              <h2 class="heading blue">Contact Me ↓</h2>
               
               <h6 class="text">.</h6>
               <h6 class="text">.</h6>
 
               
-              <form required id="form">
-              <div class="field">
-                <label for="Your_name" class="text">Your name: `</label>
-                <input size="20" type="text" name="Your_name" id="Your_name" class='input textinput'></input>
-              </div>
-              <p>_____________________________________________________________________________________________________</p>
-              <div class="field">
-                <label for="Your_email" class="text">Your email: `</label>
-                <input size="35" type="email" name="Your_email" id="Your_email" class='input textinput'></input>
-              </div>
-              <p>_____________________________________________________________________________________________________</p>
-              <div class="field">
-                <label for="message" class="text">Message: `</label>
-                <input size="50" type="textbox" name="message" id="message" class='input textinput'></input>
-              </div>
-              <p>_____________________________________________________________________________________________________</p>
-              <button id="button" class="button button3" onClick={send}>Send Email</button>
-            </form>
-            <p>  </p>
-            <p>  </p>
-            <p>___________________________________________________________</p>
-            <p class="messa">ᴹᵉˢˢᵃᵍᵉ ʷᶦˡˡ ⁿᵒᵗ ᵇᵉ ˢᵉⁿᵗ ᵘⁿˡᵉˢˢ ᵃˡˡ ᶠᶦᵉˡᵈˢ ᵃʳᵉ ᶠᶦˡˡᵉᵈ</p>
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script type="text/javascript"
-              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-            
-            <script type="text/javascript">
               
-              emailjs.init(to_name)
-            </script> 
             
             
                     </div>
