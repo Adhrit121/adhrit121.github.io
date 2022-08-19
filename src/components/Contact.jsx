@@ -6,7 +6,7 @@ import { SMTPClient } from '@emailjs/browser';
 import './sender.css';
 import { render } from "@testing-library/react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-const to_name="R7uar-a8o4NmnCJXJ"
+
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -38,33 +38,6 @@ function useWindowDimensions() {
 
 
 
-
-
-function send() {
-
-
-  
-  
-  const api_key= "template_39znrxn"
-
-  const bton = document.getElementById('button');
-  document.getElementById('form')
-  .addEventListener('submit', function(event) {
-    event.preventDefault();
-    render(bton.value = 'Sending...')
-    emailjs.sendForm("service_ozrjohk", api_key, this, to_name)
-      .then(() => {
-        render(bton.value = 'Send Email');
-        alert('Sent!');
-        render(window.location.reload());
-      }, (err) => {
-        render(bton.value = 'Error');
-        console.log(JSON.stringify(err));
-        alert(err);
-        render(window.location.reload());
-      });
-  });
-}
 
 function ContactSimple() {
 
@@ -102,9 +75,7 @@ function ContactSimple() {
 
 
   
-  
-  
-  emailjs.init(to_name)
+
   return (
     
     <div className="contact">
@@ -120,10 +91,53 @@ function ContactSimple() {
               <h2 class="heading blue">Contact Me ↓</h2>
               
               <h6 class="text">.</h6>
-              <h6 class="text">Still under construction</h6>
+              <h6 class="text">.</h6>
 
 
-              
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+              <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mleveydk" method="post">
+                <fieldset id="fs-frm-inputs">
+                  <label for="full-name" class="text">Your name: `</label>
+                  <input size="20" type="text" name="Name" class='input textinput' id="full-name" required/>
+                  <p>________________________________________________________________________________________</p>
+                  <label for="email-address" class="text">Your email: `</label>
+                  <input size="35" type="email" name="Email" id="email-address" class='input textinput' required="@"/>
+                  <p>________________________________________________________________________________________</p>
+                  <label for="Message" class="text">Message: </label>
+                  <textarea cols="70" rows="3" name="Message" id="message" class='input textinput' required></textarea>
+                  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"/>
+                </fieldset>
+                <p>________________________________________________________________________________________</p>
+                <input type="submit" class="button button3" value="Submit"/>
+                <p>___________________________________________________________</p>
+                <h6 class="messa">ᴹᵉˢˢᵃᵍᵉ ʷᶦˡˡ ⁿᵒᵗ ᵇᵉ ˢᵉⁿᵗ ᵘⁿˡᵉˢˢ ᵃˡˡ ᶠᶦᵉˡᵈˢ ᵃʳᵉ ᶠᶦˡˡᵉᵈ</h6>
+                <p> </p>
+                <p>_____________________________________________________________________________________________________</p>
+              </form>
               
 
                     </div>
