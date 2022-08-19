@@ -2,7 +2,7 @@
   "name": "adhrit-vip",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adhrit121.github.io",
+  "homepage": "https://adhrit.vip",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.16.4",
