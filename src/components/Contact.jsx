@@ -28,11 +28,7 @@ function useWindowDimensions() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   const { height, width } = useWindowDimensions();
-  if (height > 767 || width > 1024){
 
-  }else{
-    alert("This website works best on large screens and you may face some issues on this device")
-  }
   return windowDimensions;
 }
 
@@ -127,7 +123,7 @@ function ContactSimple() {
               <h6 class="text">Still under construction</h6>
 
 
-
+              
               
 
                     </div>
