@@ -3,7 +3,13 @@ import './Home.css';
 import desktopImage from './desktop.jpg';
 import mobileImage from './mobile.jpg';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-
+function PhoneAlert(){
+  const { height, width } = useWindowDimensions();  
+  if (height > 767 || width > 1024){
+  }else{alert("This website works best on large screens and you may face some issues on this device");};
+  
+  
+}
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -78,17 +84,29 @@ function HomeSimple() {
     }, 2005);
     }
   }, [home]);
-  const { height, width } = useWindowDimensions();
-  if (height > 767 || width > 1024){
+  const { height, width } = useWindowDimensions(); 
+  const [num, setNum] = useState(0);
 
-  }else{
-    alert("This website works best on large screens and you may face some issues on this device")
-  }
+  useEffect(() => {
+    // 👇️ only runs once
+    console.log('Phone alert...'); 
+    if (height > 767 || width > 1024){
+    }else{alert("This website works best on large screens and you may face some issues on this device");};
+
+    function incrementNum() {
+      setNum(prev => prev + 1);
+    }
+
+    incrementNum();
+  }, []);
+
   return (
+
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
     <div className="home" >
       {show && <div className="loader-container fill-window">
+        <script>PhoneAlert()</script>
         <ClimbingBoxLoader class="boxloader" color="#5bc0de" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
       {home && <header className='  '>
