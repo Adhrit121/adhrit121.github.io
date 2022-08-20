@@ -73,6 +73,12 @@
 
 
   }
+.links{
+  color: #bfbfbf;
+}
+.links:hover{
+  color: #ffffff;
+}
 .icon-round:hover {
     width: 22px;
     background-color: #5bc0de;

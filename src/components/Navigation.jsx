@@ -10,12 +10,19 @@ function openNav() {
   console.log("Navbar opened")
   
 }
-
+function blah() {
+  console.log(" ")
+}
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
   console.log("Navbar closed")
+  setTimeout(blah(), 2000);
+  
+  
+  
 }
+
 function NavigationSimple() {
   const queryParams = new URLSearchParams(window.location.search);
   const color = queryParams.get('color');
@@ -29,6 +36,7 @@ function NavigationSimple() {
     var classNam="navbar navbar-expand navbar-dark py-3 bg-info";
     var colour="text-white bg-info";
   };
+  
 
   return (
     
@@ -39,10 +47,10 @@ function NavigationSimple() {
       <nav className={classNam} >
         <div id="mySidebar" class="sidebar green">
           <a href="JavaScript:void(0);" class="closebtn" onClick={closeNav}><h3>✖</h3></a>
-          <a href="/">Home</a>
-          <a href="/#/about/">About</a>
-          <a href="/#/contact/">Contact Me</a>
-          <a href="/#/projects?color=green">My Projects</a>
+          <a class="links" href='/#/' onClick={closeNav}>Home</a>
+          <a class="links" href="/#/about/" onClick={closeNav}>About</a>
+          <a class="links" href="/#/contact/" onClick={closeNav}>Contact Me</a>
+          <a class="links" href="/#/projects?color=green" onClick={closeNav}>My Projects</a>
         </div>
         <div id="main">
           <container class="row row-full">

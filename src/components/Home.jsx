@@ -3,6 +3,9 @@ import './Home.css';
 import desktopImage from './desktop.jpg';
 import mobileImage from './mobile.jpg';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
+ 
+
 function PhoneAlert(){
   const { height, width } = useWindowDimensions();  
   if (height > 767 || width > 1024){
@@ -90,6 +93,9 @@ function HomeSimple() {
   useEffect(() => {
     // 👇️ only runs once
     console.log('Phone alert...'); 
+    let now = Date.now(),
+      end = now + 5000;
+    while (now < end) { now = Date.now(); };
     if (height > 767 || width > 1024){
     }else{alert("This website works best on large screens and you may face some issues on this device");};
 
@@ -106,7 +112,6 @@ function HomeSimple() {
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
     <div className="home" >
       {show && <div className="loader-container fill-window">
-        <script>PhoneAlert()</script>
         <ClimbingBoxLoader class="boxloader" color="#5bc0de" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
       {home && <header className='  '>

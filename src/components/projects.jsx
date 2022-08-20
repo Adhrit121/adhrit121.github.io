@@ -82,8 +82,11 @@ function ProjectsSimple() {
 
 
 
+  const { height, width } = useWindowDimensions(); 
+  const [num, setNum] = useState(0);
 
 
+  
 
 
 
@@ -111,6 +114,7 @@ function ProjectsSimple() {
 
 
           <div >
+          
           <Terminal
             watchConsoleLogging
             class='bash'
@@ -119,7 +123,7 @@ function ProjectsSimple() {
             barColor='black'
             style={{ fontWeight: "bold", fontSize: "1em" }}
             commands={{
-                color: {
+                color : {
                   method: (args, print, runCommand) => {
                     print(`The color is ${args._[0] || args.color}`);
                     window.open("/#/projects?color="+`${args._[0] || args.color}`, "_self");
@@ -134,7 +138,7 @@ function ProjectsSimple() {
                     },
                   ],
                 },
-                'type': (args, print, runCommand) => {
+                type: (args, print, runCommand) => {
                   const text = args.slice(1).join(' ');
                   print('');
                   for (let i = 0; i < text.length; i += 1) {
@@ -144,8 +148,8 @@ function ProjectsSimple() {
                   }
                   
                 },
-                'about': () => window.open('/#/about', "_self"),
-                'contact': () => window.open('/#/contact', "_self"),
+                about : () => window.open('/#/about', "_self"),
+                contact : () => window.open('/#/contact', "_self"),
                 
                 
             }}
