@@ -74,10 +74,13 @@
 
   }
 .links{
-  color: #bfbfbf;
+  color: #ffffff;
+}
+.white{
+  color: #ffffff;
 }
 .links:hover{
-  color: #ffffff;
+  color: #c7c7c7;
 }
 .icon-round:hover {
     width: 22px;
@@ -105,7 +108,13 @@
 
 
 
-
+div.bg-clr{
+  margin: 30px;
+  height: 150%;
+  overflow-x: clip;
+  overflow-y: clip;
+  background-color: rgba(255, 255, 255, 0.229);
+}
 
   
   .sidebar {
@@ -187,7 +196,7 @@
     transition:5s;
     padding: 16px;
   }
-  
+
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}

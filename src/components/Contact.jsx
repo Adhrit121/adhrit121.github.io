@@ -73,78 +73,59 @@ function ContactSimple() {
     }
   }, [home]);
 
-
+  const [text, setText] = useState(true);
   
-
+  console._log_old = console.log
+  console.log = function(msg) {
+    if (msg=='Navbar opened'){
+      setText(false)
+    }
+    else if (msg=='Navbar closed'){
+      setText(true)
+    }
+  }
   return (
     
-    <div className="contact">
+    <div className="contact gwarp">
 
-      {show && <div className="loader-container fill-window">
-        <ClimbingBoxLoader class="boxloader" color="#5bc0de" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
+      {show && <div className="loader-container fill-window gwarp">
+        <ClimbingBoxLoader class="boxloader" color="#ffffff" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
 
-      {home && <header className=" ">
+      {home && <div className="loader-container fill-window gwarp">
         <div class="container">
           <div class="row align-items-center my-5">
-            <div class="col-lg-5">
-              <h2 class="heading blue">Contact Me ↓</h2>
-              
-              <h6 class="text">.</h6>
-              <h6 class="text">.</h6>
+            {text && <div class="col-lg-10">
+              <h2 class="heading white">Contact Me ↓</h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-
+              <div class="box transbox widtha">
 
               <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mleveydk" method="post">
                 <fieldset id="fs-frm-inputs">
-                  <label for="full-name" class="text">Your name: `</label>
+                  <label for="full-name" class="text">Your name: ⠀</label>
                   <input size="20" type="text" name="Name" class='input textinput' id="full-name" required/>
                   <p>________________________________________________________________________________________</p>
-                  <label for="email-address" class="text">Your email: `</label>
+                  <label for="email-address" class="text">Your email: ⠀</label>
                   <input size="35" type="email" name="Email" id="email-address" class='input textinput' required="@"/>
                   <p>________________________________________________________________________________________</p>
-                  <label for="Message" class="text">Message: </label>
+                  <label class="text">Message: ⠀</label>
                   <textarea cols="70" rows="3" name="Message" id="message" class='input textinput' required></textarea>
                   <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"/>
                 </fieldset>
                 <p>________________________________________________________________________________________</p>
-                <input type="submit" class="button button3" value="Submit"/>
+                <input type="submit" class="but" value="Submit"/>
                 <p>___________________________________________________________</p>
                 <h6 class="messa">ᴹᵉˢˢᵃᵍᵉ ʷᶦˡˡ ⁿᵒᵗ ᵇᵉ ˢᵉⁿᵗ ᵘⁿˡᵉˢˢ ᵃˡˡ ᶠᶦᵉˡᵈˢ ᵃʳᵉ ᶠᶦˡˡᵉᵈ</h6>
                 <p> </p>
-                <p>_____________________________________________________________________________________________________</p>
+                
               </form>
-              
+              </div>
 
-                    </div>
+                    </div>}
             
           </div>
         </div>
-      </header>
+      </div>
 }
     </div>
     

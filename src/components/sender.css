@@ -1,7 +1,5 @@
 .button {
-    background-color: white;
-    color: black;
-    border: 2px solid #5bc0de; /* Green */
+    
     
     padding: 5px 9px;
     text-align: center;
@@ -11,13 +9,13 @@
     transition-duration: 0.4s;
 }
 .button3 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #5bc0de;
+    background-color: rgba(255, 255, 255, 0.579); 
+    color: rgb(0, 0, 0); 
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 15px;
 }
 
-.button span {
+.but span {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -42,16 +40,16 @@
     right: 0;
 }
   
-.button3:hover {
-    background-color: #5bc0de;
-    color: white;
+.but:hover {
+    background-color: #809bf4;
+    color: rgb(10, 10, 10);
     border-radius: 11px;
     padding: 6px 10px;
 }
 .input {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.116);
     color: black;
-    border: 2px solid #5bc0de; /* Green */
+    border: 2px solid #ffffff; /* Green */
     
     padding: 5px 9px;
     text-align: center;
@@ -69,7 +67,16 @@
     border-color: red;
   
 }
-
+.widtha{
+    min-width: 85%;
+}
+div.transbox {
+    margin: 30px;
+    height: 150%;
+    overflow-x: clip;
+    overflow-y: clip;
+    background-color: rgba(255, 255, 255, 0.229);
+  }
 .fill-window {
     height: 100%;
     position: absolute;
@@ -78,10 +85,10 @@
   overflow: hidden;
 }
 .input:hover {
-    background-color: #5bc0de;
+    background-color: rgba(255, 255, 255, 0.555);
     padding: 6px 10px;
-    border: 2px solid #5bc0de;
-    color: white;
+    border: 2px solid #ffffff;
+    color: rgb(0, 0, 0);
     border-radius: 15px;
 }
 .heading {
@@ -97,12 +104,13 @@
 }
 .text{
     transition-duration: 0.4s;
+    padding: 1px 2.5px;
 }
 .text:hover {
     padding: 1px 2.5px;
 }
 .messa {
-    color: #de7e00;
+    color: #ff0000a2;
     transition-duration: 0.4s;
     
 }
@@ -112,4 +120,24 @@
 }
 .black {
     color: #000000;
+}
+.but{
+    padding: 5px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+    border: 2px solid #ffffff; /* Green */
+    border-radius: 15px;
+}
+.gwarp{
+    background-image: linear-gradient(
+    90deg,
+    hsl(226deg 84% 73%) 0%,
+    hsl(308deg 31% 70%) 50%,
+    hsl(6deg 94% 79%) 100%
+  );
 }

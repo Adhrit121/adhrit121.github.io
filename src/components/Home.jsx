@@ -58,6 +58,7 @@ function HomeSimple() {
 
   const [home, setHome] = useState(false);
   const [show, setShow] = useState(true);
+  const [text, setText] = useState(true);
   const [loadingInProgress, setLoading] = useState(true);
   useEffect(() => {
     if (loadingInProgress) {
@@ -93,9 +94,6 @@ function HomeSimple() {
   useEffect(() => {
     // 👇️ only runs once
     console.log('Phone alert...'); 
-    let now = Date.now(),
-      end = now + 5000;
-    while (now < end) { now = Date.now(); };
     if (height > 767 || width > 1024){
     }else{alert("This website works best on large screens and you may face some issues on this device");};
 
@@ -105,20 +103,29 @@ function HomeSimple() {
 
     incrementNum();
   }, []);
+  console._log_old = console.log
+  console.log = function(msg) {
+    if (msg=='Navbar opened'){
+      setText(false)
+    }
+    else if (msg=='Navbar closed'){
+      setText(true)
+    }
+  }
 
   return (
 
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
-    <div className="home" >
-      {show && <div className="loader-container fill-window">
-        <ClimbingBoxLoader class="boxloader" color="#5bc0de" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
+    <div className="home gwarp" >
+      {show && <div className="loader-container fill-window gwarp">
+        <ClimbingBoxLoader class="boxloader" color="#FFFFFF" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
-      {home && <header className='  '>
+      {home && <div className='loader-container fill-window gwarp'>
         <div class="container">
           <div class="row align-items-center my-5">
-            <div class="col-lg-5">
-              <h2 class="heading blue">Home</h2>
+            {text && <div class="col-lg-10">
+              <h2 class="heading white">Home</h2>
               <p>
                   
               </p>
@@ -137,10 +144,10 @@ function HomeSimple() {
               <p class="text black">
                 Try again in a few days :)
               </p>
-            </div>
+            </div>}
           </div>
         </div>
-      </header>
+      </div>
 }
     </div>
   );

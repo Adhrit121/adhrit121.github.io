@@ -4,15 +4,14 @@ import ReactDOM from 'react-dom/client';
 // eslint-disable-next-line
 import { NavLink } from "react-router-dom";
 import './navigation.css';
+import './Home.css';
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
   console.log("Navbar opened")
   
 }
-function blah() {
-  console.log(" ")
-}
+function blah(){var x=2}
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
@@ -28,13 +27,13 @@ function NavigationSimple() {
   const color = queryParams.get('color');
   if (color=='green'){
     var classNam="navbar navbar-expand navbar-dark py-3 bg-info";
-    var colour="text-white bg-info";
+    var colour="text-white";
   }else if (color=='red'){
     var classNam="navbar navbar-expand navbar-dark py-3 bg-info";
-    var colour="text-white bg-info";
+    var colour="text-white";
   }else {
-    var classNam="navbar navbar-expand navbar-dark py-3 bg-info";
-    var colour="text-white bg-info";
+    var classNam="navbar navbar-expand navbar-dark py-3 gwarp";
+    var colour="text-white";
   };
   
 
@@ -42,15 +41,15 @@ function NavigationSimple() {
     
     
     
-    <div className="navigation" >
+    <div className="navigation gwarp sssse" >
       
       <nav className={classNam} >
-        <div id="mySidebar" class="sidebar green">
+        <div id="mySidebar" class="sidebar classq">
           <a href="JavaScript:void(0);" class="closebtn" onClick={closeNav}><h3>✖</h3></a>
-          <a class="links" href='/#/' onClick={closeNav}>Home</a>
-          <a class="links" href="/#/about/" onClick={closeNav}>About</a>
-          <a class="links" href="/#/contact/" onClick={closeNav}>Contact Me</a>
-          <a class="links" href="/#/projects?color=green" onClick={closeNav}>My Projects</a>
+          <a className="white" href='/#/' onClick={closeNav}>Home</a>
+          <a classname="white" href="/#/about/" onClick={closeNav}>About</a>
+          <a className="white" href="/#/contact/" onClick={closeNav}>Contact Me</a>
+          <a className="white" href="/#/projects?color=green" onClick={closeNav}>My Projects</a>
         </div>
         <div id="main">
           <container class="row row-full">

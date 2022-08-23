@@ -1,6 +1,6 @@
 import React,{ useState, useEffect, CSSProperties } from "react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import "./about.css"
+import "./about.css";
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -59,18 +59,27 @@ function AboutSimple() {
     }, 2005);
     }
   }, [home]);
-
+  const [text, setText] = useState(true);
+  console._log_old = console.log
+  console.log = function(msg) {
+    if (msg=='Navbar opened'){
+      setText(false)
+    }
+    else if (msg=='Navbar closed'){
+      setText(true)
+    }
+  }
   return (
-    <div className="about">
-      {show && <div className="loader-container fill-window">
-        <ClimbingBoxLoader class="boxloader" color="#5bc0de" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
+    <div className="about gwarp">
+      {show && <div className="loader-container fill-window gwarp">
+        <ClimbingBoxLoader class="boxloader" color="#FFFFFF" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
-      {home && <header className='  '>
+      {home && <div className='loader-container fill-window gwarp'>
         <div class="container">
           <div class="row align-items-center my-5">
             
-            <div class="col-lg-5">
-              <h2 className="text-info" class="heading blue">About</h2>
+            {text && <div class="col-lg-10">
+              <h2 className="text-info" class="heading white">About</h2>
               <p class="text">
                   
               </p>
@@ -85,11 +94,10 @@ function AboutSimple() {
               </p>
               <p>            </p>
 
-            </div>
+            </div>}
           </div>
         </div>
-        <center><p class="bottomfly">Cᴏᴅᴇ ғᴏʀ ᴛʜɪs ᴡᴇʙsɪᴛᴇ: </p><a onClick={() => openInNewTab('https://github.com/Adhrit121/adhrit.vip')} class="weblink">ᴳᶦᵗʰᵘᵇ</a></center>
-      </header>
+      </div>
 }
     </div>
   );

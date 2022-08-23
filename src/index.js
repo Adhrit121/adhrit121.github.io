@@ -23,11 +23,12 @@ import {
 
 ReactDOM.render(
   <HashRouter>
-    <NavigationSimple options={{
+        <NavigationSimple options={{
           headerStyle: {backgroundColor: "#fff", borderBottomWidth: 0 ,
           headerTitleStyle: { color: "#000" },
           headerTintColor: "#000",
-          headerMode: 'float',}
+          headerTransparent: true,
+          headerMode: 'float'}
           
           
         }} />
@@ -39,7 +40,13 @@ ReactDOM.render(
       <Route path="/do-not-click" element={<Donotclick />} />
       <Route path="/projects" element={<ProjectsSimple />} />
     </Routes>
-    <FooterSimple />
+    <FooterSimple options={{
+          headerStyle: {backgroundColor: "#fff", borderBottomWidth: 0 ,
+          headerTitleStyle: { color: "#000" },
+          headerTintColor: "#000",
+          headerTransparent: true,
+          headerMode: 'float'}
+    }}/>
   </HashRouter>,
 
   document.getElementById("root")

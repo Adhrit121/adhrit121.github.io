@@ -9,3 +9,11 @@
     color: #ff0000;
     transition-duration: 0.4s;
 }
+.gwarp{
+    background-image: linear-gradient(
+    90deg,
+    hsl(226deg 84% 73%) 0%,
+    hsl(308deg 31% 70%) 50%,
+    hsl(6deg 94% 79%) 100%
+  );
+}
