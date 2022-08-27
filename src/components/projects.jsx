@@ -157,6 +157,7 @@ function ProjectsSimple() {
                     },
                     about : () => window.open('/#/about', "_self"),
                     contact : () => window.open('/#/contact', "_self"),
+                    'original' : () => window.open('http://old.adhrit.vip', "_self")
                     
                     
                 }}
@@ -170,7 +171,8 @@ function ProjectsSimple() {
                     'color' : 'changes text color    Ex:"ᴄᴏʟᴏʀ ʙʟᴜᴇ" ᴄʜᴀɴɢᴇs ᴛᴇxᴛ ᴄᴏʟᴏʀ ᴛᴏ ʙʟᴜᴇ',
                     'type' : 'types in the given word    Ex:"ᴛʏᴘᴇ ʜᴇʟʟᴏ" ᴛʏᴘᴇs ɪɴ "ʜᴇʟʟᴏ"',
                     'this.code' : 'code for this website',
-                    'clear' : 'clears the terminal'
+                    'clear' : 'clears the terminal',
+                    'original' : 'opens the original version of this website'
                     
 
                 }}

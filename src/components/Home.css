@@ -31,6 +31,7 @@
 }
 .bash{
     position:fixed;
+    overflow: hidden;
     top:2000px;
     right:0px;
     bottom:0px;
@@ -267,7 +268,7 @@ body, html {
 div.transbox {
     margin: 30px;
     height: 150%;
-    overflow-x: clip;
+    overflow-x: scroll;
     overflow-y: clip;
     background-color: rgba(255, 255, 255, 0.229);
   }
