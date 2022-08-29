@@ -87,21 +87,7 @@ function ContactSimple() {
   return (
     
     <div className="contact gwarp">
-          <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5Q00XLK62"></script>
 
-    <script>
-      // eslint-disable-next-line
-      window.dataLayer = window.dataLayer || [];
-      
-      function gtag(){
-        // eslint-disable-next-line
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-D5Q00XLK62');
-    </script>
-    </head>
       {show && <div className="loader-container fill-window gwarp">
         <ClimbingBoxLoader class="boxloader" color="#ffffff" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}

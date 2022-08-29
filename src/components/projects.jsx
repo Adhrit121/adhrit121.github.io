@@ -104,21 +104,7 @@ function ProjectsSimple() {
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
     <div className="home gwarp" >
-          <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5Q00XLK62"></script>
 
-    <script>
-      
-      window.dataLayer = window.dataLayer || [];
-      
-      function gtag(){
-        // eslint-disable-next-line
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-D5Q00XLK62');
-    </script>
-    </head>
       {show && <div className="loader-container fill-window gwarp">
 
         <ClimbingBoxLoader class="boxloader" color="#FFFFFF" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
