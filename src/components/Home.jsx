@@ -4,27 +4,7 @@ import desktopImage from './desktop.jpg';
 import mobileImage from './mobile.jpg';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
- // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDmzv3ppO3s0Y0SZd5Dy_rIpw3c8QeitW4",
-  authDomain: "oldvip-2f0b1.firebaseapp.com",
-  projectId: "oldvip-2f0b1",
-  storageBucket: "oldvip-2f0b1.appspot.com",
-  messagingSenderId: "819210722273",
-  appId: "1:819210722273:web:4a9b5e0451b97dfa5090a0",
-  measurementId: "G-8LJ7GVWN9B"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 function PhoneAlert(){
   const { height, width } = useWindowDimensions();  
@@ -138,6 +118,21 @@ function HomeSimple() {
     //Add this to get background with autochange:↓(still under development)
     //style={{backgroundImage: `url(${imageUrl})` ,backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat',width: '98.7vw',height: '100vh',headerTransparent:'true'}}
     <div className="home gwarp" >
+    <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5Q00XLK62"></script>
+
+    <script>
+      // eslint-disable-next-line
+      window.dataLayer = window.dataLayer || [];
+      
+      function gtag(){
+        // eslint-disable-next-line
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-D5Q00XLK62');
+    </script>
+    </head>
       {show && <div className="loader-container fill-window gwarp">
         <ClimbingBoxLoader class="boxloader" color="#FFFFFF" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}

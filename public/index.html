@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      noscript{
+        min-height: 75px;
+        color: blue;
+      }
+      noscript:hover {
+          min-height: 100px;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink {
+        from { border-color: transparent }
+        to { border-color: orange; }
+      }
+      .typed-out {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 1.6rem;
+        width: 0;
+        animation: 
+          typing 5s steps(50, end) forwards,
+          blink .8s infinite;
+        display: inline-block;
+      }
+      
+    </style>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,7 +44,8 @@
     <title>Adhrit</title>
   </head>
   <body style="overflow-x: clip;">
-    <noscript>You need to enable JavaScript for this website to work</noscript>
+    
+    <div><center><noscript class="typed-out">You need to enable JavaScript for this website to work</noscript></center></div>
     <div id="root"></div>
   </body>
 </html>
