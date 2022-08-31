@@ -3,7 +3,8 @@ import './Home.css';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Terminal from 'terminal-in-react';
 import {render} from '@testing-library/react';
-import { useSearchParams } from "react-router-dom"
+import { useSearchParams } from "react-router-dom";
+import TypeIt from "typeit-react";
 const Results = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -114,7 +115,28 @@ function ProjectsSimple() {
           
           <div class="row align-items-center my-5">
             {text && <div class="col-lg-10">
-              <h2 class="heading white">Projects</h2>
+            <h2 class="heading white"><TypeIt
+                getBeforeInit={(instance) => {
+                    instance
+                    .delete(6, {instant: true})
+                    .type("P")
+                    .pause(300)
+                    .type("r")
+                    .pause(141)
+                    .type("o")
+                    .pause(310)
+                    .type("j")
+                    .pause(209)
+                    .type("e")
+                    .pause(191)
+                    .type("c")
+                    .pause(259)
+                    .type("t")
+                    .pause(169)
+                    .type("s");
+                    return instance;
+                }}
+            /></h2>
               <p>
                   
               </p>

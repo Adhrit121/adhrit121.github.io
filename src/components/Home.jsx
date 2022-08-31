@@ -3,7 +3,7 @@ import './Home.css';
 import desktopImage from './desktop.jpg';
 import mobileImage from './mobile.jpg';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-
+import TypeIt from "typeit-react";
 
 
 function PhoneAlert(){
@@ -113,6 +113,25 @@ function HomeSimple() {
     }
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
 
     //Add this to get background with autochange:↓(still under development)
@@ -126,10 +145,25 @@ function HomeSimple() {
         <div class="container">
           <div class="row align-items-center my-5">
             {text && <div class="col-lg-10">
-              <h2 class="heading white">Home</h2>
+            
+            <h2 class="heading white"><TypeIt
+                getBeforeInit={(instance) => {
+                    instance
+                    .delete(8, {instant: true})
+                    .type("H")
+                    .pause(270)
+                    .type("o")
+                    .pause(321)
+                    .type("m")
+                    .pause(249)
+                    .type("e");
+                    return instance;
+                }}
+            /></h2>
               <p>
                   
               </p>
+              
               <p class="text black">
               ᴬᵈʰʳᶦᵗ.ᵛᶦᵖ  ᴬᵈʰʳᶦᵗ.ᵛᶦᵖ  ᴬᵈʰʳᶦᵗ.ᵛᶦᵖ  ᴬᵈʰʳᶦᵗ.ᵛᶦᵖ  ᴬᵈʰʳᶦᵗ.ᵛᶦᵖ  ᴬᵈʰʳᶦᵗ.ᵛᶦᵖ  ᴬᵈʰʳᶦᵗ.ᵛᶦᵖ
               </p>

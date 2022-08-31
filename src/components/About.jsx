@@ -1,6 +1,7 @@
 import React,{ useState, useEffect, CSSProperties } from "react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import "./about.css";
+import TypeIt from "typeit-react";
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -84,7 +85,23 @@ function AboutSimple() {
           <div class="row align-items-center my-5">
             
             {text && <div class="col-lg-10">
-              <h2 className="text-info" class="heading white">About</h2>
+            <h2 class="heading white"><TypeIt
+                getBeforeInit={(instance) => {
+                    instance
+                    .delete(5, {instant: true})
+                    .type("A")
+                    .pause(181)
+                    .type("b")
+                    .pause(278)
+                    .type("o")
+                    .pause(228)
+                    .type("u")
+                    .pause(233)
+                    .type("t");
+                    return instance;
+                }}
+            /></h2>
+              
               <p class="text">
                   
               </p>

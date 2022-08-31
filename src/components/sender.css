@@ -84,6 +84,7 @@ div.transbox {
     width: 100%;
   overflow: hidden;
 }
+
 .input:hover {
     background-color: rgba(255, 255, 255, 0.555);
     padding: 6px 10px;
@@ -141,3 +142,16 @@ div.transbox {
     hsl(6deg 94% 79%) 100%
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Testing */

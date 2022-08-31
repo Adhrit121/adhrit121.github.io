@@ -3,10 +3,10 @@ import React, { useState, useEffect, CSSProperties } from "react";
 import emailjs from '@emailjs/browser';
 // eslint-disable-next-line
 import { SMTPClient } from '@emailjs/browser';
-import './sender.css';
 import { render } from "@testing-library/react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-
+import './sender.css';
+import TypeIt from "typeit-react";
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -84,6 +84,19 @@ function ContactSimple() {
       setText(true)
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     
     <div className="contact gwarp">
@@ -96,17 +109,59 @@ function ContactSimple() {
         <div class="container">
           <div class="row align-items-center my-5">
             {text && <div class="col-lg-10">
-              <h2 class="heading white">Contact Me ↓</h2>
+            <h2 class="heading white"><TypeIt
+                getBeforeInit={(instance) => {
+                    instance
+                    .delete(4, {instant: true})
+                    .type("C")
+                    .pause(162)
+                    .type("o")
+                    .pause(217)
+                    .type("n")
+                    .pause(281)
+                    .type("t")
+                    .pause(170)
+                    .type("a")
+                    .pause(191)
+                    .type("c")
+                    .pause(209)
+                    .type("t")
+                    .pause(530)
+                    .type(" ")
+                    .pause(439)
+                    .type("M")
+                    .pause(169)
+                    .type("e")
+                    .pause(140)
+                    .type(" ")
+                    .pause(869)
+                    .type(":")
+                    .pause(330)
+                    .type(")")
+                    .pause(2083)
+                    .delete(1)
+                    .pause(190)
+                    .delete(1)
+                    .pause(743)
+                    .type("↓");
+
+                    // Remember to return it!
+                    return instance;
+                }}
+            /></h2>
+              
+              
 
               <div class="box transbox widtha">
-
+              
               <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mleveydk" method="post">
                 <fieldset id="fs-frm-inputs">
                   <label for="full-name" class="text">Your name: ⠀</label>
-                  <input size="20" type="text" name="Name" class='input textinput' id="full-name" required/>
+                  <input size="20" type="text" name="Name" class='input textinput' id="element" required/>
                   <p>________________________________________________________________________________________</p>
                   <label for="email-address" class="text">Your email: ⠀</label>
                   <input size="35" type="email" name="Email" id="email-address" class='input textinput' required="@"/>
+                  <span class="placeholder"></span>
                   <p>________________________________________________________________________________________</p>
                   <label class="text">Message: ⠀</label>
                   <textarea cols="70" rows="3" name="Message" id="message" class='input textinput' required></textarea>
@@ -119,6 +174,7 @@ function ContactSimple() {
                 <p> </p>
                 
               </form>
+              <span class='typed1'></span>
               </div>
 
                     </div>}
