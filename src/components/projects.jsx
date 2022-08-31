@@ -115,7 +115,8 @@ function ProjectsSimple() {
           
           <div class="row align-items-center my-5">
             {text && <div class="col-lg-10">
-            <h2 class="heading white"><TypeIt
+            <h2 class="heading white"><TypeIt options={{speed: 0,
+                  waitUntilVisible: true}}
                 getBeforeInit={(instance) => {
                     instance
                     .delete(6, {instant: true})
