@@ -7,6 +7,7 @@ import { render } from "@testing-library/react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import './sender.css';
 import TypeIt from "typeit-react";
+import FadeIn from "./FadeIn";
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -106,6 +107,7 @@ function ContactSimple() {
       </div>}
 
       {home && <div className="loader-container fill-window gwarp">
+      <FadeIn delay={250} duration={450}>
         <div class="container">
           <div class="row align-items-center my-5">
             {text && <div class="col-lg-10">
@@ -183,6 +185,7 @@ function ContactSimple() {
             
           </div>
         </div>
+        </FadeIn>
       </div>
 }
     </div>

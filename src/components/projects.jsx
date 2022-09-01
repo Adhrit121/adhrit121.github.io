@@ -5,6 +5,7 @@ import Terminal from 'terminal-in-react';
 import {render} from '@testing-library/react';
 import { useSearchParams } from "react-router-dom";
 import TypeIt from "typeit-react";
+import FadeIn from './FadeIn';
 const Results = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -97,9 +98,15 @@ function ProjectsSimple() {
     else if (msg=='Navbar closed'){
       setText(true)
     }
-  }
+  };
+  
 
 
+
+
+
+
+  
 
   return (
     //Add this to get background with autochange:↓(still under development)
@@ -111,10 +118,13 @@ function ProjectsSimple() {
         <ClimbingBoxLoader class="boxloader" color="#FFFFFF" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
       {home && <div className='loader-container fill-window gwarp'>
+      <FadeIn delay={250} duration={450}>
         <div class="container">
           
           <div class="row align-items-center my-5">
+
             {text && <div class="col-lg-10">
+              
             <h2 class="heading white"><TypeIt options={{speed: 0,
                   waitUntilVisible: true}}
                 getBeforeInit={(instance) => {
@@ -144,7 +154,7 @@ function ProjectsSimple() {
           
 
 
-            <div class="box transbox" style={{ height: '150%'}}>
+            <div class="box transbox" style={{ height: '150%' , overflowY: 'scroll' , overflowX:'scroll'}}>
             
               <Terminal
                 watchConsoleLogging
@@ -202,10 +212,16 @@ function ProjectsSimple() {
                 }}
                 msg='Hi :),Type "help" to get a list of all the commands'
               />
+
+
+
+
+
             </div>
           </div>}
         </div>
         </div>
+        </FadeIn>
       </div>
 }
     </div>

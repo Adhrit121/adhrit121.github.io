@@ -4,7 +4,7 @@ import desktopImage from './desktop.jpg';
 import mobileImage from './mobile.jpg';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import TypeIt from "typeit-react";
-
+import FadeIn from './FadeIn';
 
 function PhoneAlert(){
   const { height, width } = useWindowDimensions();  
@@ -142,6 +142,7 @@ function HomeSimple() {
         <ClimbingBoxLoader class="boxloader" color="#FFFFFF" size={17} speedMultiplier={1.6} loading={loadingInProgress}/>
       </div>}
       {home && <div className='loader-container fill-window gwarp'>
+      <FadeIn delay={250} duration={450}>
         <div class="container">
           <div class="row align-items-center my-5">
             {text && <div class="col-lg-10">
@@ -183,6 +184,7 @@ function HomeSimple() {
             </div>}
           </div>
         </div>
+        </FadeIn>
       </div>
 }
     </div>
